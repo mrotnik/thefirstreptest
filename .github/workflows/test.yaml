@@ -1,0 +1,24 @@
+name: Vulnerability-scan
+on: push
+
+jobs:
+  vulnerability-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2      
+
+      - name: Fetch image 1
+        run: |
+          echo 123
+
+      - name: Fetch image 2
+        run: |
+          echo 345
+
+      - name: run cmd
+        run: |
+          pwd
+          ls -la
+          du -hd 1
+          date
